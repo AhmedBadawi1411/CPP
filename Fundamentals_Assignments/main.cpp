@@ -4,10 +4,11 @@ using namespace std;
 
 void print();
 void basic_arithmatic_operations();
+void sum();
 
 int main()
 {
-    basic_arithmatic_operations();
+    sum();
     return 0;
 }
 
@@ -34,5 +35,17 @@ void basic_arithmatic_operations()
     cout<<num1<<"  /  " <<num2<<" = "<<num1/num2<<endl;
     cout<<num1<<"  *  " <<num2<<" = "<<num1*num2<<endl;
     cout<<num1<<" Mod " <<num2<<" = "<<(int(num1)%int(num2))<<endl;
+}
+
+void sum()
+{
+    float num1,num2,num3;
+    cout<<"First Number  : ";
+    cin>>num1;
+    cout<<"Second Number : ";
+    cin>>num2;
+    cout<<"Third Number  : ";
+    cin>>num3;
+    cout<<num1<<"  +  " <<num2<<"  +  " <<num3<<" = "<<num1+num2+num3<<endl;
 }
 
