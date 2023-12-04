@@ -22,11 +22,12 @@ void grade_checker();
 void odd_or_even();
 void grade_checker_v2();
 void multiple_of_number();
+void program_12();
 
 int main()
 {
     repeat:
-    multiple_of_number();
+    program_12();
     goto repeat;
     return 0;
 }
@@ -270,5 +271,18 @@ void multiple_of_number()
     cout<<"Input Number: ";
     cin>>x;
     (x%6==0)?cout<<x<<" Is Multiple of 6 \n\n************************\n":cout<<x<<"Is Not Multiple of 6 \n\n************************\n";
+
+}
+
+void program_12()
+{
+    int num,sum{0};
+    for(int i = 4; i > 0; i--)
+    {
+        cout<<"Input Number : ";
+        cin>>num;
+        sum += num;
+    }
+    (sum >= 50)? cout<<" => YES\n******************\n":cout<<" => No\n******************\n";
 
 }
