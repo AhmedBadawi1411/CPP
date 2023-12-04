@@ -10,14 +10,19 @@ using namespace std;
 ** sum()   : takes 3 numbers and return its sum.
 ** solve_equations() : solving the following equations - f(x)= x^2+7x-9 |&&| g(x) = x^6+5x^4+2x^3+25 -.
 */
+
 void print();
 void basic_arithmatic_operations();
 void sum();
 void solve_equations();
 void colors();
+void basic_calculator();
+
 int main()
 {
-    colors();
+    repeat:
+    basic_calculator();
+    goto repeat;
     return 0;
 }
 
@@ -84,6 +89,8 @@ void solve_equations()
 
 void colors()
 {
+
+
     char ch;
     cout<<"Enter Character : ";
     cin>>ch;
@@ -109,4 +116,43 @@ void colors()
         cout<<"No Color"<<endl;
         break;
     }
+}
+
+void basic_calculator()
+{
+    float num1,num2;
+    char ch;
+
+    cout<<"***********************************\nFirst Number : ";
+    cin>>num1;
+    cout<<"Second Number : ";
+    cin>>num2;
+    onError:
+    cout<<"Choose Operation:\n  + Addition\n  - Subtraction\n  / Division\n  * Multiplication\n  % Modules \n  ^ Power\n  ";
+    cin>>ch;
+    switch(ch)
+    {
+        case '+':
+        cout<<"\n"<<num1<<"  +  " <<num2<<" = "<<num1+num2<<"\n";
+        break;
+        case '-':
+        cout<<"\n"<<num1<<"  -  " <<num2<<" = "<<num1-num2<<"\n";
+        break;
+        case '/':
+         cout<<"\n"<<num1<<"  /  " <<num2<<" = "<<num1/num2<<"\n";
+        break;
+        case '*':
+        cout<<"\n"<<num1<<"  *  " <<num2<<" = "<<num1*num2<<"\n";
+        break;
+        case '%':
+        cout<<"\n"<<num1<<" Mod " <<num2<<" = "<<(int(num1)%int(num2))<<"\n";
+        break;
+        case '^':
+        cout<<"\n"<<num1<<" Pow " <<num2<<" = "<<pow(num1,num2)<<"\n";
+        break;
+        default:
+            cout<<"Operation Not Found!\n";
+            goto onError;
+
+    };
 }
