@@ -3,14 +3,21 @@
 
 using namespace std;
 
+/*
+** main    : Entry Point.
+** print() : program number one 'cout' Practice.
+** basic_arithmatic_operations() : takes two numbers and return its addition, muliplication, division, modules, subtraction.
+** sum()   : takes 3 numbers and return its sum.
+** solve_equations() : solving the following equations - f(x)= x^2+7x-9 |&&| g(x) = x^6+5x^4+2x^3+25 -.
+*/
 void print();
 void basic_arithmatic_operations();
 void sum();
 void solve_equations();
-
+void colors();
 int main()
 {
-    solve_equations();
+    colors();
     return 0;
 }
 
@@ -75,3 +82,31 @@ void solve_equations()
 
 }
 
+void colors()
+{
+    char ch;
+    cout<<"Enter Character : ";
+    cin>>ch;
+    switch(ch)
+    {
+    case 'm':
+    case 'M':
+        cout<<"Maginta"<<endl;
+        break;
+    case 'w':
+    case 'W':
+        cout<<"White"<<endl;
+        break;
+    case 'r':
+    case 'R':
+        cout<<"Red"<<endl;
+        break;
+    case 'i':
+    case 'I':
+        cout<<"Icterine"<<endl;
+        break;
+    default:
+        cout<<"No Color"<<endl;
+        break;
+    }
+}
