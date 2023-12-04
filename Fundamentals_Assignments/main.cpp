@@ -19,11 +19,12 @@ void colors();
 void basic_calculator();
 void degree_checker();
 void grade_checker();
+void odd_or_even();
 
 int main()
 {
     repeat:
-     grade_checker();
+     odd_or_even();
     goto repeat;
     return 0;
 }
@@ -211,5 +212,19 @@ void grade_checker()
     else
     {
         cout<<"Fail\n-----------------------------\n";
+    }
+}
+
+void odd_or_even()
+{
+    int num{0};
+    cout<<"Input Number : ";
+    cin>>num;
+
+    if(num % 2 == 0)
+    {
+        cout<<" -> "<<num<<" is EVEN\n***********************\n";
+    }else{
+        cout<<" -> "<<num<<" is ODD\n***********************\n";
     }
 }
