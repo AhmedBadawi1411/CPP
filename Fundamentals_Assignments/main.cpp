@@ -17,11 +17,12 @@ void sum();
 void solve_equations();
 void colors();
 void basic_calculator();
+void degree_checker();
 
 int main()
 {
     repeat:
-    basic_calculator();
+    degree_checker();
     goto repeat;
     return 0;
 }
@@ -155,4 +156,25 @@ void basic_calculator()
             goto onError;
 
     };
+}
+
+void degree_checker()
+{
+    float x{0.0f};
+    onError:
+    cout<<"Degree : ";
+    cin>>x;
+    if(x > 100 || x < 0)
+    {
+        cout<<"Invalid Degree\n-----------------------------\n";
+        goto onError;
+    }
+    else if(x >= 50 )
+    {
+        cout<<"Pass\n-----------------------------\n";
+    }
+    else
+    {
+        cout<<"Fail\n-----------------------------\n";
+    }
 }
