@@ -20,11 +20,13 @@ void basic_calculator();
 void degree_checker();
 void grade_checker();
 void odd_or_even();
+void grade_checker_v2();
+void multiple_of_number();
 
 int main()
 {
     repeat:
-     odd_or_even();
+    multiple_of_number();
     goto repeat;
     return 0;
 }
@@ -227,4 +229,50 @@ void odd_or_even()
     }else{
         cout<<" -> "<<num<<" is ODD\n***********************\n";
     }
+}
+
+void grade_checker_v2()
+{
+    float x{0.0f};
+    onError:
+    cout<<"Degree : ";
+    cin>>x;
+    if(x > 100 || x < 0)
+    {
+        cout<<"Invalid Degree\n-----------------------------\n";
+        goto onError;
+    }
+    else if(x >= 85 && x <= 100)
+    {
+        cout<<"Excellent\n-----------------------------\n";
+    }
+    else if(x >= 75 && x < 85)
+    {
+        cout<<"Very Good\n-----------------------------\n";
+    }
+    else if(x >= 65 && x < 75)
+    {
+        cout<<"Good\n-----------------------------\n";
+    }
+    else if(x >= 50 && x <65)
+    {
+        cout<<"Acceptable\n-----------------------------\n";
+    }
+    else
+    {
+        cout<<"Fail\n-----------------------------\n";
+    }
+}
+
+void multiple_of_number()
+{
+    int y{1},x{1}, result {1};
+    cout<<"Input Number: ";
+    cin>>x;
+    y=x;
+    for( x ; x >= 1; x--)
+    {
+        result*=x;
+    }
+    cout<<"The Multiple Of "<<y<<" Is "<<result<<"\n\n************************\n";
 }
