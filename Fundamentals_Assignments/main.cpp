@@ -266,13 +266,9 @@ void grade_checker_v2()
 
 void multiple_of_number()
 {
-    int y{1},x{1}, result {1};
+    int x{1};
     cout<<"Input Number: ";
     cin>>x;
-    y=x;
-    for( x ; x >= 1; x--)
-    {
-        result*=x;
-    }
-    cout<<"The Multiple Of "<<y<<" Is "<<result<<"\n\n************************\n";
+    (x%6==0)?cout<<x<<" Is Multiple of 6 \n\n************************\n":cout<<x<<"Is Not Multiple of 6 \n\n************************\n";
+
 }
