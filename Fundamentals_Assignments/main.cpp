@@ -18,11 +18,12 @@ void solve_equations();
 void colors();
 void basic_calculator();
 void degree_checker();
+void grade_checker();
 
 int main()
 {
     repeat:
-    degree_checker();
+     grade_checker();
     goto repeat;
     return 0;
 }
@@ -172,6 +173,40 @@ void degree_checker()
     else if(x >= 50 )
     {
         cout<<"Pass\n-----------------------------\n";
+    }
+    else
+    {
+        cout<<"Fail\n-----------------------------\n";
+    }
+}
+
+
+void grade_checker()
+{
+    float x{0.0f};
+    onError:
+    cout<<"Degree : ";
+    cin>>x;
+    if(x > 100 || x < 0)
+    {
+        cout<<"Invalid Degree\n-----------------------------\n";
+        goto onError;
+    }
+    else if(x >= 85 )
+    {
+        cout<<"Excellent\n-----------------------------\n";
+    }
+    else if(x >= 75 )
+    {
+        cout<<"Very Good\n-----------------------------\n";
+    }
+    else if(x >= 65 )
+    {
+        cout<<"Good\n-----------------------------\n";
+    }
+    else if(x >= 50 )
+    {
+        cout<<"Acceptable\n-----------------------------\n";
     }
     else
     {
